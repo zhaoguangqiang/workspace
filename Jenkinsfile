@@ -1,5 +1,9 @@
 pipeline {
-    agent any 
+    agent any
+    environment {
+        buildParam = 'buildParam1'
+        build1Param = 'buildParam2'
+    }
     stages {
         stage('Build') {
             parallel {
@@ -13,7 +17,7 @@ pipeline {
                 stage('BuildStep2Use5s') { 
                     steps {
                         echo 'build....'
-                        bat 'python testFalse.py'
+                        bat 'python testTrue.py'
                         sleep 5
                     }
                 }
