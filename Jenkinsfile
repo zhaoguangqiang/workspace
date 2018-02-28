@@ -1,18 +1,19 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
+        stage('BuildStep1Use5s') { 
             steps {
                 echo 'build....'
                 bat 'python testTrue.py'
-                bat 'python testFalse.py'
+                sleep 5
             }
-            //steps {
-            //    python testTrue.py
-            //}
-            //steps {
-            //    python testFalse.py
-           // }
+        }
+        stage('BuildStep2Use5s') { 
+            steps {
+                echo 'build....'
+                bat 'python testTrue.py'
+                sleep 5
+            }
         }
         stage('Test') { 
             steps {
