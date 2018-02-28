@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    environment {
-        buildParam = 'buildParam1'
-        build1Param = 'buildParam2'
-    }
     stages {
         stage('Build') {
+            environment {
+                buildParam = 'buildParam1'
+                build1Param = 'buildParam2'
+            }
             parallel {
                 stage('BuildStep1Use5s') { 
                     steps {
