@@ -10,14 +10,14 @@ pipeline {
                 stage('BuildStep1Use5s') { 
                     steps {
                         echo 'build....'
-                        bat 'python testTrue.py'
+                        bat 'python testTrue.py ${buildParam}'
                         sleep 5
                     }
                 }
                 stage('BuildStep2Use5s') { 
                     steps {
                         echo 'build....'
-                        bat 'python testTrue.py'
+                        bat 'python testTrue.py ${build1Param}'
                         sleep 5
                     }
                 }
