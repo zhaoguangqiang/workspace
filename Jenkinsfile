@@ -4,8 +4,8 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'build....'
-                sh 'python testTrue.py'
-                sh 'python testFalse.py'
+                bat 'python testTrue.py'
+                bat 'python testFalse.py'
             }
             //steps {
             //    python testTrue.py
