@@ -4,13 +4,15 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'build....'
-            }
-            steps {
                 python testTrue.py
-            }
-            steps {
                 python testFalse.py
             }
+            //steps {
+            //    python testTrue.py
+            //}
+            //steps {
+            //    python testFalse.py
+           // }
         }
         stage('Test') { 
             steps {
