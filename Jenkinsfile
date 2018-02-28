@@ -5,6 +5,12 @@ pipeline {
             steps {
                 echo 'build....'
             }
+            steps {
+                python testTrue.py
+            }
+            steps {
+                python testFalse.py
+            }
         }
         stage('Test') { 
             steps {
