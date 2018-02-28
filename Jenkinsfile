@@ -9,15 +9,15 @@ pipeline {
             parallel {
                 stage('BuildStep1Use5s') { 
                     steps {
-                        echo 'build.... ${buildParam}'
-                        bat 'python testTrue.py'
+                        echo "build.... ${buildParam}"
+                        bat "python testTrue.py ${buildParam}"
                         sleep 5
                     }
                 }
                 stage('BuildStep2Use5s') { 
                     steps {
-                        echo 'build.... ${build1Param}'
-                        bat 'python testTrue.py'
+                        echo "build.... ${build1Param}"
+                        bat "python testTrue.py ${build1Param}"
                         sleep 5
                     }
                 }
